@@ -1431,7 +1431,7 @@ echo
 exit
 fi
 
-echo -e "${ARROW} ${CYAN}Stopping Flux daemon serivce...${NC}"
+echo -e "${ARROW} ${CYAN}Stopping Flux daemon service...${NC}"
 sudo systemctl stop $COIN_NAME  > /dev/null 2>&1 && sleep 2
 sudo fuser -k 16125/tcp > /dev/null 2>&1
 
@@ -1491,7 +1491,7 @@ fi
 
 sudo systemctl start $COIN_NAME  > /dev/null 2>&1 && sleep 2
 NUM='35'
-MSG1='Restarting daemon serivce...'
+MSG1='Restarting daemon service...'
 MSG2="${CYAN}........................[${CHECK_MARK}${CYAN}]${NC}"
 spinning_timer
 echo -e "" && echo -e ""

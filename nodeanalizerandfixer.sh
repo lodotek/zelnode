@@ -999,7 +999,7 @@ if [[ "$REPLACE" == "1" ]]; then
 read -p "Would you like to correct daemon config errors Y/N?" -n 1 -r
 echo -e ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-echo -e "${YELLOW}Stopping Flux daemon serivce...${NC}"
+echo -e "${YELLOW}Stopping Flux daemonservice...${NC}"
 sudo systemctl stop "$COIN_NAME"
 sudo fuser -k 16125/tcp > /dev/null 2>&1
 echo -e ""
@@ -1031,7 +1031,7 @@ fi
 echo -e ""
 sudo systemctl start "$COIN_NAME"
 NUM='35'
-MSG1=' Restarting Flux daemon serivce...'
+MSG1=' Restarting Flux daemonservice...'
 MSG2="${CYAN}............[${CHECK_MARK}${CYAN}]${NC}"
 spinning_timer
 echo -e ""
